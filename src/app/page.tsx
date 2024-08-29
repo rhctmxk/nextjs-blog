@@ -1,5 +1,9 @@
-export default function Home() {
+import Hero from "@/components/Hero";
+
+export default function HomePage() {
     return (
-        <section className='bd-gray-500'>Main</section>
+        <>
+            <Hero />
+        </>
     );
 }
