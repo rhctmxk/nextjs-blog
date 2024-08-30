@@ -15,6 +15,18 @@ export type Post = {
     featured: boolean;
 }
 
+// FeaturedPosts
+export async function getFeaturedPosts(): Promise<Post[]> {
+    return getAllPosts() // 모든 Posts를 읽어오고, featured==true
+        .then((posts) => posts.filter((post) => post.featured));
+}
+
+// CarouselPosts
+export async function getNonFeaturedPosts(): Promise<Post[]> {
+    return getAllPosts() // 모든 Posts를 읽어오고, featured==true
+        .then((posts) => posts.filter((post) => !post.featured));
+}
+
 export async function getAllPosts(): Promise<Post[]> {
     const filePath = path.join(process.cwd(), 'data', 'posts.json');
     return readFile(filePath, 'utf-8')
