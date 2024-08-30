@@ -10,7 +10,7 @@ export default function Hero() {
             <h3 className='text-xl font-semibold'>Front-End Enfineer</h3>
             <p>꿈을 코딩하는 사람, 지현</p>
             <Link href={'/contact'}>
-                <button className='bg-pink-400 font-bold rounded-xl py-1 px-4 mt-2'>Contact Me</button>
+                <button className='bg-pink-200 font-bold rounded-xl py-1 px-4 mt-2'>Contact Me</button>
             </Link>
         </section>
     )
